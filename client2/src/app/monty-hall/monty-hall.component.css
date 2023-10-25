@@ -1,0 +1,87 @@
+#bodyMain {
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Center the contents horizontally */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#gameResult {
+    background-color: #eeeeee;
+    border-radius: 3px;
+    width: 450px;
+    border: 1px solid #000;
+    padding: 5px; 
+    margin: 5px 30px 0 0; 
+    
+  }
+
+#formInputs{
+    padding: 10px;
+    width: 500px;
+    border-radius: 3px;
+    border: 2px solid #005324;
+    display: inline-block;
+    text-align: left;
+}
+
+#formResults{
+    margin-top: 10px;
+    padding: 10px;
+    width: 500px;
+    border-radius: 3px;
+    border: 2px solid #040053;
+}
+
+.inputLabel {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.numInput {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.checkBox {
+    margin-top: 5px;
+}
+
+.submitButton {
+    align-self: center;
+    width: 97%;
+    background-color: #007bff; /* Change the background color */
+    color: #fff; /* Change the text color to white */
+    border: none;
+    border-radius: 5px; /* Add rounded corners to the button */
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background-color: #0056b3; /* Change button color on hover */
+}
+
+ul{
+    list-style: none;
+}
+
+#gameDescription{
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#listOfResults{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}

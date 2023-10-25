@@ -1,0 +1,46 @@
+<div id="bodyMain">
+  <h2 id="mainHeading">Monty Hall Simulation</h2>
+  <div id="formInputs">
+      <div id="gameDescription">
+          <ol>
+            <li><p>Set the number of game simulations you want to run.</p></li>
+            <li><p>Choose whether to change your initial door selection.</p></li>
+            <li><p>Click "Simulate" to observe the outcomes and discover the Monty Hall paradox.</p></li>
+          </ol>
+      </div>
+      <form (ngSubmit)="simulateGames()">
+        <div>
+          <label style="margin-right: 10px;" for="numGames">Number of Simulations:</label>
+          <input class="numInput" type="number" id="numGames" name="numGames" [(ngModel)]="numGames" required>
+        </div>
+        <div>
+          <label for="changeDoor">Change Door:</label>
+          <input class="checkBox" type="checkbox" id="changeDoor" name="changeDoor" [(ngModel)]="changeDoor">
+        </div>
+        <button class="submitButton" style="margin-top: 5px;" type="submit">Simulate</button>
+      </form>
+  </div>
+  <div id="formResults"> 
+    <div *ngIf="results.length > 0" >
+        <h3>{{responseHeading}}</h3>
+        <ul>
+          <li>
+            Win percentage {{ winPercentage * 100 | number:'1.2-2' }}% ({{winGames}} / {{winGames+lostGames}})
+          </li>
+        </ul>
+    </div>
+    <div *ngIf="results.length > 0">
+      <ul id="listOfResults">
+        <li *ngFor="let result of results; let i = index">
+          <div id="gameResult">
+            Game {{ result.gameNumber }}:
+            <span [style.color]="result.outcome === 'win' ? 'green' : (result.outcome === 'lose' ? 'red' : 'inherit')">
+              {{ result.outcome === 'win' ? 'Win' : "Lose" }}
+            </span>
+          </div>
+        </li>
+      </ul>      
+    </div>
+  </div>
+</div>
+ 
